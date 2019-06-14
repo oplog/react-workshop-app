@@ -10,7 +10,7 @@ import {
 function calculatePrice(cart) {
   let price = 0;
   cart.forEach(item => {
-    price += item.price
+    price += item.price * item.count
   })
   return price;
 }
@@ -34,9 +34,9 @@ export default function ShoppingCart(props) {
                 <Image src={item.image} height="50" />
               </Col>
               <Col xs={7}>
-                {item.text} ({item.size})
+                {item.text} ({item.size}) x {item.count}
               </Col>
-              <Col className="text-right">{item.price} $</Col>
+              <Col className="text-right">{item.price * item.count} $</Col>
             </Row>
           );
         })}
@@ -44,6 +44,7 @@ export default function ShoppingCart(props) {
       <Card.Footer className="text-muted">
         <Row>
           <Col>
+            <Button variant="secondary" onClick={props.clearCart}>Clear</Button>
             <Button variant="primary" onClick={() => checkout(cart)}>Checkout</Button>
           </Col>
           <Col xs={7}>

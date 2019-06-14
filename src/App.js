@@ -27,11 +27,21 @@ class App extends React.Component {
       selectedSize
     })
   }
+  clearCart() {
+    this.setState({ cart: [] });
+  }
   addCart(product) {
     let { cart } = this.state;
-    this.setState({
-      cart: [...cart, product]
-    })
+    const itemIndex = cart.findIndex(item => {
+      return item.id === product.id;
+    });
+    if (itemIndex < 0) {
+      product.count = 1;
+      cart.push(product);
+    } else {
+      cart[itemIndex].count += 1;
+    }
+    this.setState({ cart });
   }
   render() {
     return (
@@ -62,7 +72,7 @@ class App extends React.Component {
               </Row>
             </Col>
             <Col sm={4}>
-              <ShoppingCart cart={this.state.cart} />
+              <ShoppingCart cart={this.state.cart} clearCart={() => this.clearCart()} />
             </Col>
           </Row>
         </Container>

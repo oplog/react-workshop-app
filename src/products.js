@@ -1,13 +1,14 @@
 export default [
   {
+    id: 1,
     title: "New Balance",
     text: "Erkek Sweatshirt",
     price: 80,
     image: "https://img-trendyol.mncdn.com/Assets/ProductImages/oa/47/2478813/1/201731010002_1_org.jpg",
     size: "XL"
   },
-
   {
+    id: 2,
     title: "Defacto",
     text: "Kadin Elbise",
     price: 35,
@@ -15,6 +16,7 @@ export default [
     size: "M"
   },
   {
+    id: 3,
     title: "New Balance",
     text: "Erkek Sweatshirt",
     price: 89,
@@ -22,6 +24,7 @@ export default [
     size: "L"
   },
   {
+    id: 4,
     title: "New Balance",
     text: "Erkek Sweatshirt",
     price: 80,
@@ -29,6 +32,7 @@ export default [
     size: "L"
   },
   {
+    id: 5,
     title: "Defacto",
     text: "Kadin Pantolon",
     price: 50,
@@ -36,6 +40,7 @@ export default [
     size: "S"
   },
   {
+    id: 6,
     title: "New Balance",
     text: "Erkek Sweatshirt",
     price: 89,
@@ -43,6 +48,7 @@ export default [
     size: "XL"
   },
   {
+    id: 7,
     title: "Defacto",
     text: "Kadin Pantolon",
     price: 89,
@@ -50,6 +56,7 @@ export default [
     size: "M"
   },
   {
+    id: 8,
     title: "Defacto",
     text: "Kadin Elbise",
     price: 89,
