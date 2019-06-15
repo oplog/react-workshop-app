@@ -1,18 +1,8 @@
-import React from 'react';
-import './App.css';
-
-import ShoppingCart from "./components/shoppingCart";
-import ShoppingItem from "./components/shoppingItem";
-import Navbar from "./components/navbar";
+import React from "react";
+import "./App.css";
 
 function App() {
-  return (
-    <div>
-      <Navbar />
-      <ShoppingItem />
-      <ShoppingCart />
-    </div>
-  );
+  return <div>Hello World</div>;
 }
 
 export default App;
